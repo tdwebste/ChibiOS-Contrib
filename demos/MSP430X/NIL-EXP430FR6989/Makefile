@@ -100,7 +100,10 @@ endif
 PROJECT = nil
 
 # Imported source files and paths
-CHIBIOS = ../../../../ChibiOS
+ifndef CHIBIOS
+	CHIBIOS = ../../../../ChibiOS
+endif
+
 CHIBIOS_CONTRIB = ../../..
 # Startup files.
 include $(CHIBIOS_CONTRIB)/os/common/startup/MSP430X/compilers/GCC/mk/startup_msp430fr5xxx.mk

@@ -86,7 +86,10 @@ endif
 PROJECT = ch
 
 # Imported source files and paths
-CHIBIOS = ../../../../ChibiOS
+ifndef CHIBIOS
+	CHIBIOS = ../../../../ChibiOS
+endif
+
 CHIBIOS_CONTRIB = $(CHIBIOS)/../ChibiOS-Contrib
 # Licensing files.
 include $(CHIBIOS)/os/license/license.mk
